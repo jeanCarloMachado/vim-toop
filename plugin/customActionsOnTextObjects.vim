@@ -25,7 +25,7 @@ fun! s:DoAction(algorithm,type)
         silent exe "normal! `[v`]y"
     endif
     " call the user-defined function, passing it the contents of the unnamed register
-    let repl = s:{a:algorithm}(Chomp(@@))
+    let repl = {a:algorithm}(Chomp(@@))
     " if the function returned a value, then replace the text
     if type(repl) == 1
         " put the replacement text into the unnamed register, and also set it to be a
