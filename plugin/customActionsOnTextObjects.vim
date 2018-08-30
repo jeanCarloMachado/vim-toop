@@ -60,5 +60,5 @@ fun! MapAction(algorithm, key)
 endfun
 
 
-command! -nargs=* MapAction call MapAction( '<args>' )
+command! -nargs=* MapAction call MapAction( <args> )
 
