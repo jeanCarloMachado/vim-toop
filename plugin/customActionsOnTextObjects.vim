@@ -58,3 +58,7 @@ fun! MapAction(algorithm, key)
     exe 'xmap '.a:key.'  <Plug>actions'.a:algorithm
     exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
 endfun
+
+
+command! -nargs=* MapAction call MapAction( '<args>' )
+
