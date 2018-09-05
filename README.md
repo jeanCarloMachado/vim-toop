@@ -28,6 +28,12 @@ call toop#mapAround('**', '<leader>bo')
 
 
 
+"using async
+fun! GoogleIt(str)
+    execute 'AsyncRun $BROWSER "'.a:str.'"'
+endfunc
+call toop#mapFunction('GoogleIt', '<leader>gi')
+
 fun! FoldSomething(str)
     let comment=split(&commentstring, '%s')
     if len(l:comment)==1
@@ -35,15 +41,8 @@ fun! FoldSomething(str)
     endif
     return l:comment[0]." {{{\n".a:str."\n".l:comment[1]."}}}"
 endfun
-
 call toop#mapFunction('FoldSomething', '<leader>fo')
 
-
-
-"using async
-fun! GoogleIt(str)
-    execute 'AsyncRun run_function googleIt "'.a:str.'"'
-endfunc
 
 
 ```
