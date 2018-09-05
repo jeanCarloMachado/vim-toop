@@ -17,9 +17,9 @@ call toop#mapShell('sed "s/\\\//g" ', '<leader>u')
 
 
 
-"double quote
-call toop#mapAround("'", "<leader>'")
 "single quote
+call toop#mapAround("'", "<leader>'")
+"double quote
 call toop#mapAround('"', '<leader>"')
 "markdown italic
 call toop#mapAround('*', '<leader>it')
