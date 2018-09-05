@@ -55,4 +55,14 @@ After having mapped some behaviour you can use it in the following ways:
 - with the current line by repeat the last key of the stroke `<leader>jbb`
 
 
+## Installation
+
+
+Use your favourite package manager:
+```vim
+Plug 'jeanCarloMachado/vim-toop'
+```
+
+
+
 Enjoy!
