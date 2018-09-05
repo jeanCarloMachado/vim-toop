@@ -16,6 +16,13 @@ call toop#mapShell('jq .', '<leader>jb')
 call toop#mapShell('sed "s/\\\//g" ', '<leader>u')
 
 
+
+"double quote
+call toop#mapAround("'", "<leader>'")
+"single quote
+call toop#mapAround('"', '<leader>"')
+"markdown italic
+call toop#mapAround('*', '<leader>it')
 "markdown bold
 call toop#mapAround('**', '<leader>bo')
 
