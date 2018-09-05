@@ -10,6 +10,8 @@ It's the easiest way of creating "native-like" behaviour to your vim.
 ## Usage Examples
 
 ```vim
+"make json objects beautiful
+call toop#mapShell('jq .', '<leader>jb')
 "unescape an object
 call toop#mapShell('sed "s/\\\//g" ', '<leader>u')
 
