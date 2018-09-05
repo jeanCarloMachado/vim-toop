@@ -4,7 +4,9 @@ The most native way of extending your Vim.
 
 Create custom text-object operations.
 
-Toop stands for Text Objects OPerations. Or also Tim pOpe Original Project (with extensions).
+Toop stands for Text Objects OPerations. 
+
+Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with extensions).
 
 
 ## Usage Examples
@@ -43,7 +45,14 @@ fun! FoldSomething(str)
 endfun
 call toop#mapFunction('FoldSomething', '<leader>fo')
 
-
-
 ```
 
+After having mapped some behaviour you can use it in the following ways:
+
+
+- After a visual selection `<C-v><leader>jb`
+- with a text object `is<leader>jb`
+- with the current line by repeat the last key of the stroke `<leader>jbb`
+
+
+Enjoy!
