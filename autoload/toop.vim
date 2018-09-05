@@ -7,11 +7,25 @@ function! toop#mapFunction(algorithm, key)
     exe 'xmap '.a:key.'  <Plug>actions'.a:algorithm
     exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
 endfun
-" command -nargs=* MapAction :call MapAction(<args>)
-" command! -nargs=* MapAction call MapAction( <f-args> )
+
+
+function! s:runShell(cmd, text)
+    let out = system(a:cmd, a:text)
+    return out
+endfun
+
+let funPairs=[]
+
+function! toop#mapShell(cmd, key)
+    let s:Cb = function('s:runShell', [a:cmd])
+    call toop#mapFunction('s:Cb', a:key)
+endfun
+
 
 "only works with s:
 fun! s:DoAction(algorithm,type)
+
+    let s:currentAlgo = a:algorithm
     " backup settings that we will change
     let sel_save = &selection
     let cb_save = &clipboard
