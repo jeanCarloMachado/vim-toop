@@ -14,12 +14,26 @@ function! s:runShell(cmd, text)
     return out
 endfun
 
-let funPairs=[]
 
 function! toop#mapShell(cmd, key)
-    let s:Cb = function('s:runShell', [a:cmd])
+    let Cb = function('s:runShell', [a:cmd])
     call toop#mapFunction('s:Cb', a:key)
 endfun
+
+function! s:myAround(surround, text)
+    return a:surround.''.a:text.''.a:surround
+endfun
+
+let s:funcs = {}
+
+function! toop#mapAround(surround, key)
+    let indice = len(s:funcs) + 1
+
+    let s:funcs['f_'.indice] = function('s:myAround', [a:surround])
+    execute 'let s:f_'.indice.' =  s:funcs["f_'.indice.'"]'
+    call toop#mapFunction('s:f_'.indice, a:key)
+endfun
+
 
 
 "only works with s:
