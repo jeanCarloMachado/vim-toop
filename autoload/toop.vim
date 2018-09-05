@@ -1,8 +1,8 @@
 
 function! toop#mapFunction(algorithm, key)
-    exe 'nnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call <SID>ActionSetup("'.a:algorithm.'")<CR>g@'
-    exe 'xnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call <SID>DoAction("'.a:algorithm.'",visualmode())<CR>'
-    exe 'nnoremap <silent> <Plug>actionsLine'.a:algorithm.' :<C-U>call <SID>DoAction("'.a:algorithm.'",v:count1)<CR>'
+    exe 'nnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#ActionSetup("'.a:algorithm.'")<CR>g@'
+    exe 'xnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#DoAction("'.a:algorithm.'",visualmode())<CR>'
+    exe 'nnoremap <silent> <Plug>actionsLine'.a:algorithm.' :<C-U>call toop#DoAction("'.a:algorithm.'",v:count1)<CR>'
     exe 'nmap '.a:key.'  <Plug>actions'.a:algorithm
     exe 'xmap '.a:key.'  <Plug>actions'.a:algorithm
     exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
@@ -37,7 +37,7 @@ endfun
 
 
 "only works with s:
-fun! s:DoAction(algorithm,type)
+fun! toop#DoAction(algorithm,type)
 
     let s:currentAlgo = a:algorithm
     " backup settings that we will change
@@ -83,10 +83,10 @@ fun! s:DoAction(algorithm,type)
 endfun
 
 fun! ActionOpfunc(type)
-    return DoAction(encode_algorithm, a:type)
+    return toop#DoAction(s:encode_algorithm, a:type)
 endfun
 
-fun! ActionSetup(algorithm)
-    let encode_algorithm = a:algorithm
+fun! toop#ActionSetup(algorithm)
+    let s:encode_algorithm = a:algorithm
     let &opfunc = matchstr(expand('<sfile>'), '<SNR>\d\+_').'ActionOpfunc'
 endfun
