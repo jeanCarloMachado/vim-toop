@@ -1,6 +1,6 @@
 # Toop
 
-Create custom text-object operations.  This is the most native way of extending your Vim.
+Create custom text-object operations. 
 
 Toop stands for Text Objects OPerations.
 
@@ -66,6 +66,7 @@ Plug 'jeanCarloMachado/vim-toop'
 
 For each text object vim offers you have operations working on them. And if you create your own text objects you also get them working for free.
 For each new text operation you get all text objects working on them and for each new text object all text operations work on them.
+This is the most native way of extending your Vim.
 
 Toop is even better if you use alongside this plugins to extend your text objects:
 
