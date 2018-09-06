@@ -1,4 +1,30 @@
 
+let s:shellF = {}
+
+function! toop#mapShell(surround, key)
+    let indice = len(s:shellF) + 1
+    let s:shellF['f_'.indice] = function('s:runShell', [a:surround])
+    execute 'let s:fs_'.indice.' =  s:shellF["f_'.indice.'"]'
+    call toop#mapFunction('s:fs_'.indice, a:key)
+endfun
+
+function! s:runShell(cmd, text)
+    let out = system(a:cmd, a:text)
+    return out
+endfun
+
+function! toop#mapAround(left, right, key)
+    let indice = len(s:shellF) + 1
+    let s:shellF['f_'.indice] = function('s:runAround', [a:left, a:right])
+    execute 'let s:af_'.indice.' =  s:shellF["f_'.indice.'"]'
+    call toop#mapFunction('s:af_'.indice, a:key)
+endfun
+
+function! s:runAround(left, right, text)
+    return a:left.a:text.a:right
+endfun
+
+
 function! toop#mapFunction(algorithm, key)
     exe 'nnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#ActionSetup("'.a:algorithm.'")<CR>g@'
     exe 'xnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#DoAction("'.a:algorithm.'",visualmode())<CR>'
@@ -7,34 +33,6 @@ function! toop#mapFunction(algorithm, key)
     exe 'xmap '.a:key.'  <Plug>actions'.a:algorithm
     exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
 endfun
-
-
-function! s:runShell(cmd, text)
-    let out = system(a:cmd, a:text)
-    return out
-endfun
-
-let s:shellF = {}
-function! toop#mapShell(surround, key)
-    let indice = len(s:shellF) + 1
-    let s:shellF['f_'.indice] = function('s:runShell', [a:surround])
-    execute 'let s:fs_'.indice.' =  s:shellF["f_'.indice.'"]'
-    call toop#mapFunction('s:fs_'.indice, a:key)
-endfun
-
-
-function! s:myAround(surround, text)
-    return a:surround.''.a:text.''.a:surround
-endfun
-
-let s:aroundF = {}
-function! toop#mapAround(surround, key)
-    let indice = len(s:aroundF) + 1
-    let s:aroundF['f_'.indice] = function('s:myAround', [a:surround])
-    execute 'let s:af_'.indice.' =  s:aroundF["f_'.indice.'"]'
-    call toop#mapFunction('s:af_'.indice, a:key)
-endfun
-
 
 
 "only works with s:

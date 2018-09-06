@@ -6,32 +6,25 @@ Toop stands for Text Objects OPerations.
 
 Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with extensions).
 
-## Usage Examples
+## Mapping Examples
 
 ```vim
 "make json objects beautiful
 call toop#mapShell('jq .', '<leader>jb')
-"unescape an object
-call toop#mapShell('sed "s/\\\//g" ', '<leader>u')
-
-
+call toop#mapShell('translate.sh en de', '<leader>le')
+call toop#mapShell('md5sum | cut -d " " -f1 ', '<leader>md5')
+call toop#mapShell('graph-easy', '<leader>mg')
 
 "single quote
-call toop#mapAround("'", "<leader>'")
-"double quote
-call toop#mapAround('"', '<leader>"')
-"markdown italic
-call toop#mapAround('*', '<leader>it')
-"markdown bold
-call toop#mapAround('**', '<leader>bo')
+call toop#mapAround('<', '>', '<leader><')
+"markdown code block
+call toop#mapAround("```sh\n", "\n```", '<leader>c')
 
 
-
-"using async
-fun! GoogleIt(str)
-    execute 'AsyncRun $BROWSER "'.a:str.'"'
-endfunc
-call toop#mapFunction('GoogleIt', '<leader>gi')
+function! Duplicate(string)
+    return a:string.a:string
+endfun
+call toop#mapFunction('Duplicate', "<leader>2x")
 
 fun! FoldSomething(str)
     let comment=split(&commentstring, '%s')
@@ -41,6 +34,11 @@ fun! FoldSomething(str)
     return l:comment[0]." {{{\n".a:str."\n".l:comment[1]."}}}"
 endfun
 call toop#mapFunction('FoldSomething', '<leader>fo')
+
+fun! GoogleIt(str)
+    execute 'AsyncRun $BROWSER "'.a:str.'"'
+endfunc
+call toop#mapFunction('GoogleIt', '<leader>gi')
 
 ```
 
@@ -53,6 +51,19 @@ After having mapped some behaviour you can use it in the following ways:
 - repeat the operations over text  objects with the  `.` (dot)
 
 
+## Exponential features
+
+
+For each text object vim offers you have operations working out of the box on them. And if you create your own text object with plugins like [vim-textobj-user](https://github.com/kana/vim-textobj-user) you also get them for free.
+
+Toop is even better if you use this plugins alongside:
+
+ - 'kana/vim-textobj-user': easily create your text object
+ - 'kana/vim-textobj-function': treats a function as a text object
+ - 'michaeljsmith/vim-indent-object': uses the lines at the current indentation as a text object
+ - 'vim-scripts/argtextobj.vim': uses a function  argument as an text object
+
+
 ## Installation
 
 
@@ -61,6 +72,3 @@ Use your favourite package manager:
 Plug 'jeanCarloMachado/vim-toop'
 ```
 
-
-
-Enjoy!
