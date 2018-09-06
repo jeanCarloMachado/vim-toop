@@ -61,10 +61,11 @@ Plug 'jeanCarloMachado/vim-toop'
 ```
 
 
-## Exponential functionality
+## Exponential functionality out of the box
 
 
-For each text object vim offers you have operations working out of the box on them. And if you create your own text objects you also get them working for free.
+For each text object vim offers you have operations working on them. And if you create your own text objects you also get them working for free.
+For each new text operation you get all text objects working on them and for each new text object all text operations work on them.
 
 Toop is even better if you use alongside this plugins to extend your text objects:
 
@@ -72,4 +73,5 @@ Toop is even better if you use alongside this plugins to extend your text object
  - [kana/vim-textobj-function](https://github.com/kana/vim-textobj-function): treats a function as a text object
  - [michaeljsmith/vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): uses the lines at the current indentation as a text object
  - [vim-scripts/argtextobj.vim](https://github.com/vim-scripts/argtextobj.vim): uses a function  argument as an text object
+
 
