@@ -10,7 +10,7 @@ Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wik
 
 ```vim
 "make json objects beautiful
-call toop#mapShell('jq .', '<leader>jb')
+call toop#mapShell('jq .', 'jq')
 call toop#mapShell('translate.sh en de', '<leader>le')
 call toop#mapShell('md5sum | cut -d " " -f1 ', '<leader>md5')
 call toop#mapShell('graph-easy', '<leader>mg')
