@@ -50,19 +50,7 @@ After having mapped some behaviour you can use it in the following ways:
 - with the current line by repeat the last key of the stroke `<leader>jbb`
 - repeat the operations over text  objects with the  `.` (dot)
 
-
-## Exponential features
-
-
-For each text object vim offers you have operations working out of the box on them. And if you create your own text object with plugins like [vim-textobj-user](https://github.com/kana/vim-textobj-user) you also get them for free.
-
-Toop is even better if you use this plugins alongside:
-
- - 'kana/vim-textobj-user': easily create your text object
- - 'kana/vim-textobj-function': treats a function as a text object
- - 'michaeljsmith/vim-indent-object': uses the lines at the current indentation as a text object
- - 'vim-scripts/argtextobj.vim': uses a function  argument as an text object
-
+Want more ideas of operations? Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/391f1da253a0c23414663ae0618f78ebbdbc4245/vimrc#L490).
 
 ## Installation
 
@@ -71,4 +59,17 @@ Use your favourite package manager:
 ```vim
 Plug 'jeanCarloMachado/vim-toop'
 ```
+
+
+## Exponential functionality
+
+
+For each text object vim offers you have operations working out of the box on them. And if you create your own text objects you also get them working for free.
+
+Toop is even better if you use alongside this plugins to extend your text objects:
+
+ - [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user): easily create your own text objects
+ - [kana/vim-textobj-function](https://github.com/kana/vim-textobj-function): treats a function as a text object
+ - [michaeljsmith/vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): uses the lines at the current indentation as a text object
+ - [vim-scripts/argtextobj.vim](https://github.com/vim-scripts/argtextobj.vim): uses a function  argument as an text object
 
