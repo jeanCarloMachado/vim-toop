@@ -1,10 +1,6 @@
 # Toop
 
-Create custom text-object operations. 
-
 Toop stands for Text Objects OPerations.
-
-Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with steroids).
 
 ## Mapping Examples
 
@@ -75,4 +71,8 @@ Toop is even better if you use alongside this plugins to extend your text object
  - [michaeljsmith/vim-indent-object](https://github.com/michaeljsmith/vim-indent-object): uses the lines at the current indentation as a text object
  - [vim-scripts/argtextobj.vim](https://github.com/vim-scripts/argtextobj.vim): uses a function  argument as an text object
 
+
+## Acknowledgments
+
+Another meaning the project name is [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with steroids). The core idea was extracted from a code snippet on one of his repositories.
 
