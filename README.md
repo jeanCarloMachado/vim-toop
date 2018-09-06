@@ -4,7 +4,7 @@ Create custom text-object operations.
 
 Toop stands for Text Objects OPerations.
 
-Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with extensions).
+Or also [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with steroids).
 
 ## Mapping Examples
 
