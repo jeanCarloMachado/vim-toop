@@ -35,6 +35,8 @@ endfunc
 call toop#mapFunction('GoogleIt', '<leader>gi')
 ```
 
+The only requirement of mapShell is that you read from stdin and writes to stdout.
+
 After having mapped some behaviour you can use it in the following ways:
 
 
