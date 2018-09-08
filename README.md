@@ -35,7 +35,6 @@ fun! GoogleIt(str)
     execute 'AsyncRun $BROWSER "'.a:str.'"'
 endfunc
 call toop#mapFunction('GoogleIt', '<leader>gi')
-
 ```
 
 After having mapped some behaviour you can use it in the following ways:
@@ -59,12 +58,11 @@ Plug 'jeanCarloMachado/vim-toop'
 
 ## Exponential functionality out of the box
 
+By adding a new operation with toop you get it for all text objects. And
+when you add new text objects you get all operations for free. This is
+the most native way of extending your Vim.
 
-For each text object vim offers you have operations working on them. And if you create your own text objects you also get them working for free.
-For each new text operation you get all text objects working on them and for each new text object all text operations work on them.
-This is the most native way of extending your Vim.
-
-Toop is even better if you use alongside this plugins to extend your text objects:
+This plugins complement toop nicely by allowing you to create new text objects:
 
  - [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user): easily create your own text objects
  - [kana/vim-textobj-function](https://github.com/kana/vim-textobj-function): treats a function as a text object
