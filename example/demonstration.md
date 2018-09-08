@@ -3,18 +3,38 @@
 Let's create a translation mappings using translate-shell
 
 ```vim
-"translate English to German
-call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:de', 'ted')
 "translate German to English
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', 'tde')
+"translate English to German
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:de', 'ted')
+```
 ```
 
-```
+Das Veilchen
 
-But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+Ein Veilchen auf der Wiese stand,
+gebückt in sich und unbekannt;
+es war ein herzigs Veilchen.
+Da kam ein' junge Schäferin
+mit leichtem Schritt und munterm Sinn
+daher, daher,
+die Wiese her und sang.
 
+Ach! denkt das Veilchen, wär' ich nur
+die schönste Blume der Natur,
+ach, nur ein kleines Weilchen,
+bis mich das Liebchen abgepflückt
+und an dem Busen matt gedrückt,
+ach, nur, ach nur
+ein Viertelstündchen lang!
 
-Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+Ach, aber ach! Das Mädchen kam
+und nicht in acht das Veilchen nahm,
+ertrat das arme Veilchen.
+Es sank und starb, und freut' sich noch:
+und sterb' ich denn, so sterb' ich doch
+durch sie, durch sie,
+zu ihren Füßen doch!
 
 ```
 
