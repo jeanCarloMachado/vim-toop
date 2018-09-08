@@ -80,3 +80,10 @@ The original code snippet came from one of his projects where it was used as aux
 Since there's only a code snippet [hanging around](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) the internet I decided to create a proper project and work on the idea.
 
 And here is the result! Let me know your thoughts.
+
+
+## Roadmap
+
+- Add async support
+- Results in new pane
+- Compose commands?
