@@ -5,48 +5,57 @@ Author:  Jean Carlo Machado <https://jeancarlomachado.net/>:
 
 INTRODUCTION                                    *toop*
 
-The most native way of extending your Vim.
-
 Create custom text-object operations.
 
 Toop stands for Text Objects OPerations.
+
+You map a keystroke to a behaviour that can be applied on text-objects.
 
 Examples                                        *toop-examples*
 
 
     "make json objects beautiful
     call toop#mapShell('jq .', '<leader>jb')
-    "unescape an object
-    call toop#mapShell('sed "s/\\\//g" ', '<leader>u')
+
+    "make markdown numbered list
+    call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>nl')
 
 
 
-    "single quote
-    call toop#mapAround("'", "<leader>'")
-    "double quote
-    call toop#mapAround('"', '<leader>"')
-    "markdown italic
-    call toop#mapAround('*', '<leader>it')
-    "markdown bold
-    call toop#mapAround('**', '<leader>bo')
+
+functions                                       *toop-functions*
 
 
 
-    "using async
-    fun! GoogleIt(str)
-        execute 'AsyncRun $BROWSER "'.a:str.'"'
-    endfunc
-    call toop#mapFunction('GoogleIt', '<leader>gi')
+toop#mapShell                                   *toop#mapShell*
 
-    fun! FoldSomething(str)
-        let comment=split(&commentstring, '%s')
-        if len(l:comment)==1
-            call add(comment, l:comment[0])
-        endif
-        return l:comment[0]." {{{\n".a:str."\n".l:comment[1]."}}}"
-    endfun
-    call toop#mapFunction('FoldSomething', '<leader>fo')
+Maps a shell call, receives input on stdin and replaces the result with the stdout.
 
+Example: call toop#mapShell('jq .', '<leader>jb')
+
+
+toop#mapFunction                                *toop#mapFunction*
+
+
+Maps a vim function and replaces the content with the result
+
+Example:
+
+function! Duplicate(string)
+    return a:string.a:string
+endfun
+call toop#mapFunction('Duplicate', "<leader>2x")
+
+
+toop#mapAround                                  *toop#mapAroun*
+
+
+Convenience function to add content around the text object.
+Allows a different content for the left and right side.
+
+Example:
+
+call toop#mapAround("```sh\n", "\n```", '<leader>c')
 
 
 
