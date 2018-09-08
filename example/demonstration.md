@@ -15,9 +15,15 @@ Now let's translate inside a sentence (is)
 Or a paragraph (ap)
 
 
+    Einen Satz. Middle sentence. Another sentence.
+    Einen Satz. Mittleren Satz. Another sentence.
     One sentence. Middle sentence. Another sentence.
 
     One sentence. Middle sentence. Another sentence.
+    One sentence. Middle sentence. Another sentence.
+    One sentence. Middle sentence. Another sentence.
+    One sentence. Middle sentence. Another sentence.
+
 
 
 Actually any text object works.
