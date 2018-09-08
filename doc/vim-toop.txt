@@ -1,4 +1,4 @@
-*vim-toop.txt*  Reduce the cognitive load by hiding irrelevant PHP syntax
+*vim-toop.txt*  Easily map operations over text-objects
 *toop*
 
 Author:  Jean Carlo Machado <https://jeancarlomachado.net/>:
