@@ -79,8 +79,7 @@ fun! toop#DoAction(algorithm,type)
     " call ShowStringOnNewWindow(result)
 
     " if the last char is a new line only in the result drop it
-    "  since most shell commands print their reuslts with new lines
-    "  in the end
+    "  since most shell commands print results with new lines in the end
     if (s:lastChar(result) == "\n" && s:lastChar(input) != "\n")
         let result = strcharpart(result, 0, (len(result) - 1))
     endif
