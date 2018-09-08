@@ -76,7 +76,6 @@ fun! toop#DoAction(algorithm,type)
     " call the user-defined function, passing it the contents of the unnamed register
     let input = @@
     let result = {a:algorithm}(input)
-    " call ShowStringOnNewWindow(result)
 
     " if the last char is a new line only in the result drop it
     "  since most shell commands print results with new lines in the end
@@ -98,11 +97,3 @@ fun! toop#DoAction(algorithm,type)
     let &selection = sel_save
     let &clipboard = cb_save
 endfun
-
-fun! ShowStringOnNewWindow(content)
-    split _output_
-    normal! ggdG
-    setlocal buftype=nofile
-    call append(0, split(a:content, '\v\n'))
-endfun
-
