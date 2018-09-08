@@ -10,6 +10,7 @@ call toop#mapShell('jq .', 'jq')
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
 call toop#mapShell('md5sum | cut -d " " -f1 ', '<leader>md5')
 call toop#mapShell('graph-easy', '<leader>mg')
+call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>mnl')
 
 "single quote
 call toop#mapAround('<', '>', '<leader><')
