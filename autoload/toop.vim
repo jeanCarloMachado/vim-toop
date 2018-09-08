@@ -1,4 +1,3 @@
-
 let s:shellF = {}
 
 function! toop#mapShell(surround, key)
@@ -24,7 +23,6 @@ function! s:runAround(left, right, text)
     return a:left.a:text.a:right
 endfun
 
-
 function! toop#mapFunction(algorithm, key)
     exe 'nnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#ActionSetup("'.a:algorithm.'")<CR>g@'
     exe 'xnoremap <silent> <Plug>actions'    .a:algorithm.' :<C-U>call toop#DoAction("'.a:algorithm.'",visualmode())<CR>'
@@ -34,10 +32,16 @@ function! toop#mapFunction(algorithm, key)
     exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
 endfun
 
+fun! ActionOpfunc(type)
+    return toop#DoAction(s:encode_algorithm, a:type)
+endfun
 
-"only works with s:
+fun! toop#ActionSetup(algorithm)
+    let s:encode_algorithm = a:algorithm
+    let &opfunc = matchstr(expand('<sfile>'), '<SNR>\d\+_').'ActionOpfunc'
+endfun
+
 fun! toop#DoAction(algorithm,type)
-
     let s:currentAlgo = a:algorithm
     " backup settings that we will change
     let sel_save = &selection
@@ -79,13 +83,4 @@ fun! toop#DoAction(algorithm,type)
     let @@ = reg_save
     let &selection = sel_save
     let &clipboard = cb_save
-endfun
-
-fun! ActionOpfunc(type)
-    return toop#DoAction(s:encode_algorithm, a:type)
-endfun
-
-fun! toop#ActionSetup(algorithm)
-    let s:encode_algorithm = a:algorithm
-    let &opfunc = matchstr(expand('<sfile>'), '<SNR>\d\+_').'ActionOpfunc'
 endfun

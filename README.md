@@ -7,7 +7,7 @@ Toop stands for Text Objects OPerations.
 ```vim
 "make json objects beautiful
 call toop#mapShell('jq .', 'jq')
-call toop#mapShell('translate.sh en de', '<leader>le')
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
 call toop#mapShell('md5sum | cut -d " " -f1 ', '<leader>md5')
 call toop#mapShell('graph-easy', '<leader>mg')
 
