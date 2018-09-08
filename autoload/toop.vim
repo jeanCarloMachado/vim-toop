@@ -41,6 +41,11 @@ fun! toop#ActionSetup(algorithm)
     let &opfunc = matchstr(expand('<sfile>'), '<SNR>\d\+_').'ActionOpfunc'
 endfun
 
+fun! s:lastChar(str)
+    let indice = len(a:str) - 1
+    return strcharpart(a:str, indice)
+endfun
+
 fun! toop#DoAction(algorithm,type)
     let s:currentAlgo = a:algorithm
     " backup settings that we will change
@@ -69,13 +74,23 @@ fun! toop#DoAction(algorithm,type)
         silent exe "normal! `[v`]y"
     endif
     " call the user-defined function, passing it the contents of the unnamed register
-    let repl = {a:algorithm}(Chomp(@@))
+    let input = @@
+    let result = {a:algorithm}(input)
+    " call ShowStringOnNewWindow(result)
+
+    " if the last char is a new line only in the result drop it
+    "  since most shell commands print their reuslts with new lines
+    "  in the end
+    if (s:lastChar(result) == "\n" && s:lastChar(input) != "\n")
+        let result = strcharpart(result, 0, (len(result) - 1))
+    endif
+
     " if the function returned a value, then replace the text
-    if type(repl) == 1
+    if type(result) == 1
         " put the replacement text into the unnamed register, and also set it to be a
         " characterwise, linewise, or blockwise selection, based upon the selection type of the
         " yank we did above
-        call setreg('@', repl, getregtype('@'))
+        call setreg('@', result, getregtype('@'))
         " relect the visual region and paste
         normal! gvp
     endif
@@ -84,3 +99,11 @@ fun! toop#DoAction(algorithm,type)
     let &selection = sel_save
     let &clipboard = cb_save
 endfun
+
+fun! ShowStringOnNewWindow(content)
+    split _output_
+    normal! ggdG
+    setlocal buftype=nofile
+    call append(0, split(a:content, '\v\n'))
+endfun
+
