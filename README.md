@@ -74,5 +74,9 @@ This plugins complement toop nicely by allowing you to create new text objects:
 
 ## Acknowledgments
 
-Another meaning the project name is [Tim pOpe](https://github.com/tpope) [Original](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) Project (with steroids). The core idea was extracted from a code snippet on one of his repositories.
+Another meaning for this project name is [Tim pOpe](https://github.com/tpope) Original Project.
 
+The original code snippet came from one of his projects where it was used as auxiliary functionality.
+Since there's only a code snippet [hanging around](http://vim.wikia.com/wiki/Act_on_text_objects_with_custom_functions) the internet I decided to create a proper project and work on the idea.
+
+And here is the result! Let me know your thoughts.
