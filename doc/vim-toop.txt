@@ -1,7 +1,7 @@
 *vim-toop.txt*  Reduce the cognitive load by hiding irrelevant PHP syntax
 *toop*
 
-Author:  Jena Carlo Machado <https://jeancarlomachado.net/>
+Author:  Jean Carlo Machado <https://jeancarlomachado.net/>:
 
 INTRODUCTION                                    *toop*
 
