@@ -7,18 +7,14 @@ Toop stands for Text Objects OPerations.
 ```vim
 "make json objects beautiful
 call toop#mapShell('jq .', 'jq')
-call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
-call toop#mapShell('md5sum | cut -d " " -f1 ', '<leader>md5')
+"make cool graphs
 call toop#mapShell('graph-easy', '<leader>mg')
-"make numbered list
-call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>mnl')
+"translate german to english
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
+"make markdown numbered list
+call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>nl')
 
-"single quote
-call toop#mapAround('<', '>', '<leader><')
-"markdown code block
-call toop#mapAround("```sh\n", "\n```", '<leader>c')
-
-
+"using vim functions
 function! Duplicate(string)
     return a:string.a:string
 endfun

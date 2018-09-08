@@ -9,21 +9,20 @@ call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:fr', '<leader>ef')
 
 Now let's translate inside a sentence (is)
 
-    One sentence. Middle sentence. Another sentence.
+    First sentence. Second sentence. Third sentence
 
 
 Or a paragraph (ap)
 
 
-    Einen Satz. Middle sentence. Another sentence.
-    Einen Satz. Mittleren Satz. Another sentence.
-    One sentence. Middle sentence. Another sentence.
+    First sentence. Second sentence. Third sentence
+    First sentence. Second sentence. Third sentence
+    First sentence. Second sentence. Third sentence
 
-    One sentence. Middle sentence. Another sentence.
-    One sentence. Middle sentence. Another sentence.
-    One sentence. Middle sentence. Another sentence.
-    One sentence. Middle sentence. Another sentence.
-
+    First sentence. Second sentence. Third sentence
+    First sentence. Second sentence. Third sentence
+    First sentence. Second sentence. Third sentence
+    First sentence. Second sentence. Third sentence
 
 
 Actually any text object works.
