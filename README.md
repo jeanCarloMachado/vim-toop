@@ -2,6 +2,8 @@
 
 Toop stands for Text Objects OPerations.
 
+![](https://i.imgur.com/3XnM7rj.gif)
+
 ## Mapping Examples
 
 ```vim
