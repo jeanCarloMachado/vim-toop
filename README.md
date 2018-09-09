@@ -1,11 +1,19 @@
 # Toop
 
 Toop stands for Text Objects OPerations.
+It allows you to send text objects to functions or to the shell.
+
+Toop allows to add behavior equivalent to the native `d` part in `dap` or `dip` (delete a paragraph or inside a paragraph).
+
 
 ![](https://i.imgur.com/3XnM7rj.gif)
 
 ## Examples
 
+
+### toop#mapShell
+
+mapShell sends the text object directly to the shell stdin
 ```vim
 "make json objects beautiful
 call toop#mapShell('jq .', '<leader>jq')
@@ -19,6 +27,15 @@ call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<lead
 call toop#mapShell('base64', '<leader>64e')
 "base 64 decode
 call toop#mapShell('base64 -D', '<leader>64d')
+
+```
+
+### toop#mapFunction
+
+
+mapFunction sends the text object as the only argument to the function you defined.
+
+```vim
 
 "using vim functions
 function! Duplicate(string)
@@ -40,6 +57,16 @@ fun! GoogleIt(str)
 endfunc
 call toop#mapFunction('GoogleIt', '<leader>gi')
 
+
+```
+### toop#mapAround
+
+
+mapAround put string patterns around the text object
+
+
+
+```vim
 "math block
 call toop#mapAround('$', '$', '<leader>mb')
 "markdown shell block
@@ -49,8 +76,6 @@ call toop#mapAround('~~', '~~', '<leader>st')
 
 
 ```
-
-The only requirement of mapShell is that you read from stdin and writes to stdout.
 
 After having mapped some behaviour you can use it in the following ways:
 
