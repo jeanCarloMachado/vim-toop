@@ -4,7 +4,7 @@ Toop stands for Text Objects OPerations.
 
 ![](https://i.imgur.com/3XnM7rj.gif)
 
-## Mapping Examples
+## Examples
 
 ```vim
 "make json objects beautiful
@@ -55,12 +55,12 @@ The only requirement of mapShell is that you read from stdin and writes to stdou
 After having mapped some behaviour you can use it in the following ways:
 
 
-- After a visual selection `<C-v><leader>jb`
 - with a text object `is<leader>jb`
-- with the current line by repeat the last key of the stroke `<leader>jbb`
 - repeat the operations over text  objects with the  `.` (dot)
+- with the current line by repeat the last key of the stroke `<leader>jbb`
+- After a visual selection `<C-v><leader>jb`
 
-Want more ideas of operations? Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/26bdc03137e1a23302483888182ab4cb0de528b5/vimrc#L483).
+**Want more ideas of operations?** Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/26bdc03137e1a23302483888182ab4cb0de528b5/vimrc#L483).
 
 ## Installation
 

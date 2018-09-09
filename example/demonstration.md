@@ -5,6 +5,8 @@ Put mappings like these in your .vimrc
 ```vim
 "translate German to English
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>ge')
+"translate English to German
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:de', '<leader>eg')
 ```
 ```
 
