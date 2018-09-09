@@ -35,8 +35,6 @@ call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>ge')
 call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>nl')
 "base 64 encode
 call toop#mapShell('base64', '64e')
-"base 64 decode
-call toop#mapShell('base64 --decode', '64d')
 
 ```
 
