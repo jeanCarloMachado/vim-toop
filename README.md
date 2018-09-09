@@ -5,7 +5,7 @@ It allows you to send text objects to functions or to the shell.
 
 
 
-![](https://i.imgur.com/3XnM7rj.gif)
+![](https://i.imgur.com/86foqnf.gif)
 
 
 Toop allows to add behavior equivalent to the native `d` part in `dap` or `dis` (delete a paragraph or inside a sentence).

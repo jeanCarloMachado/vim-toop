@@ -1,15 +1,21 @@
-# Welcome to Toop
-
-Put mappings like these in your .vimrc
-
 ```vim
+"Put mappings like these in your .vimrc
 "translate German to English
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>ge')
 "translate English to German
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:de', '<leader>eg')
 ```
-```
+## Use cases:
 
+- translate inside word (`<leader>geiw`)
+- repeat translate inside word (`.`)
+- translate around sentence (`<leader>geas`)
+- translate inside paragraph (`<leader>geip`)
+- repeat translate inside paragraph (`.`)
+- translate to German the selection (`<leader>eg`)
+- translate to German the current line (`<leader>egg`)
+
+```
 Das Veilchen
 
 Ein Veilchen auf der Wiese stand,
