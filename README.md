@@ -1,7 +1,7 @@
 # Toop
 
 Toop stands for Text Objects OPerations.
-It allows you to send text objects to functions or to the shell.
+It allows you to send text objects to functions or to the shell using Vim's native lingo.
 
 
 
