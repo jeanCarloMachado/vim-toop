@@ -35,6 +35,15 @@ fun! GoogleIt(str)
     execute 'AsyncRun $BROWSER "'.a:str.'"'
 endfunc
 call toop#mapFunction('GoogleIt', '<leader>gi')
+
+"math block
+call toop#mapAround('$', '$', '<leader>mb')
+"markdown shell block
+call toop#mapAround("```sh\n", "\n```", '<leader>c')
+"markdown strike through
+call toop#mapAround('~~', '~~', '<leader>st')
+
+
 ```
 
 The only requirement of mapShell is that you read from stdin and writes to stdout.
