@@ -47,7 +47,7 @@ After having mapped some behaviour you can use it in the following ways:
 - with the current line by repeat the last key of the stroke `<leader>jbb`
 - repeat the operations over text  objects with the  `.` (dot)
 
-Want more ideas of operations? Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/391f1da253a0c23414663ae0618f78ebbdbc4245/vimrc#L490).
+Want more ideas of operations? Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/26bdc03137e1a23302483888182ab4cb0de528b5/vimrc#L483).
 
 ## Installation
 

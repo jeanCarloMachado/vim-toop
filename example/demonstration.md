@@ -1,14 +1,10 @@
-
 # Welcome to Toop
 
 Put mappings like these in your .vimrc
 
 ```vim
-"anything executable that reads stdin and writes to stdout works
 "translate German to English
-call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', 'tde')
-"translate English to German
-call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi en:de', 'ted')
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>ge')
 ```
 ```
 
