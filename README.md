@@ -93,7 +93,7 @@ By adding a new operation with toop you get it for all text objects. And
 when you add new text objects you get all operations for free. This is
 the most native way of extending your Vim.
 
-This plugins complement toop nicely by allowing you to create new text objects:
+These plugins complement toop nicely by allowing you to create new text objects:
 
  - [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user): easily create your own text objects
  - [kana/vim-textobj-function](https://github.com/kana/vim-textobj-function): treats a function as a text object
