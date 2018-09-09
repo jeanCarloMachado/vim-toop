@@ -109,5 +109,5 @@ And here is the result! Let me know your thoughts.
 ## Q&A
 
 *What is a text-object?*
-    Instead of editing character by is much more efficient to edit by word, sentence, and paragraph. In Vim, these higher-level concepts [are called text objects](https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/).  But in the end just a block of text. If you want to go deeper take a look at `:h text-object`
+    Instead of editing character by is much more efficient to edit by word, sentence, and paragraph. In Vim, these higher-level concepts are called text objects.  But in the end just a block of text. If you want to go deeper take a look at [this post](https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/) and also the official documentation `:h text-object`.
 
