@@ -66,25 +66,6 @@ fun! GoogleIt(str)
     execute 'AsyncRun $BROWSER "'.a:str.'"'
 endfunc
 call toop#mapFunction('GoogleIt', '<leader>gi')
-
-
-```
-### toop#mapAround
-
-
-mapAround put string patterns around the text object
-
-
-
-```vim
-"math block
-call toop#mapAround('$', '$', '<leader>$')
-"markdown shell block
-call toop#mapAround("```sh\n", "\n```", '<leader>c')
-"markdown strike through
-call toop#mapAround('~~', '~~', '<leader>st')
-
-
 ```
 
 After having mapped some behaviour you can use it in the following ways:
