@@ -15,6 +15,10 @@ call toop#mapShell('graph-easy', '<leader>mg')
 call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
 "make markdown numbered list
 call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>nl')
+"base 64 encode
+call toop#mapShell('base64', '<leader>64e')
+"base 64 decode
+call toop#mapShell('base64 -D', '<leader>64d')
 
 "using vim functions
 function! Duplicate(string)
