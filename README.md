@@ -3,10 +3,20 @@
 Toop stands for Text Objects OPerations.
 It allows you to send text objects to functions or to the shell.
 
-Toop allows to add behavior equivalent to the native `d` part in `dap` or `dip` (delete a paragraph or inside a paragraph).
 
 
 ![](https://i.imgur.com/3XnM7rj.gif)
+
+
+Toop allows to add behavior equivalent to the native `d` part in `dap` or `dis` (delete a paragraph or inside a sentence).
+
+Actually let's build that:
+
+```vim
+call toop#mapShell('return', '<leader>d')
+```
+
+Done! It works like the native `d`.
 
 ## Examples
 
