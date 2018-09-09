@@ -28,15 +28,15 @@ mapShell sends the text object directly to the shell stdin
 "make json objects beautiful
 call toop#mapShell('jq .', '<leader>jq')
 "make cool graphs
-call toop#mapShell('graph-easy', '<leader>mg')
+call toop#mapShell('graph-easy', 'mg')
 "translate german to english
-call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>de')
+call toop#mapShell('trans -b  -no-theme -no-auto -no-ansi de:en', '<leader>ge')
 "make markdown numbered list
 call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<leader>nl')
 "base 64 encode
-call toop#mapShell('base64', '<leader>64e')
+call toop#mapShell('base64', '64e')
 "base 64 decode
-call toop#mapShell('base64 --decode', '<leader>64d')
+call toop#mapShell('base64 --decode', '64d')
 
 ```
 
@@ -78,7 +78,7 @@ mapAround put string patterns around the text object
 
 ```vim
 "math block
-call toop#mapAround('$', '$', '<leader>mb')
+call toop#mapAround('$', '$', '<leader>$')
 "markdown shell block
 call toop#mapAround("```sh\n", "\n```", '<leader>c')
 "markdown strike through
