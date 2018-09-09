@@ -36,7 +36,7 @@ call toop#mapShell("awk 'BEGIN { c=1 } // { print c\". \"$0; c = c+1 }'", '<lead
 "base 64 encode
 call toop#mapShell('base64', '<leader>64e')
 "base 64 decode
-call toop#mapShell('base64 -D', '<leader>64d')
+call toop#mapShell('base64 --decode', '<leader>64d')
 
 ```
 
