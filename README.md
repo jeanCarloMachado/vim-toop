@@ -68,7 +68,7 @@ After having mapped some behaviour you can use it in the following ways:
 - with the current line by repeat the last key of the stroke `<leader>jbb`
 - After a visual selection `<C-v><leader>jb`
 
-**Want more ideas of operations?** Check my [vimrc](https://github.com/jeanCarloMachado/vimrc/blob/26bdc03137e1a23302483888182ab4cb0de528b5/vimrc#L483).
+**Want more?** Check the ideas in the [wiki](https://github.com/jeanCarloMachado/vim-toop/wiki/usage-ideas).
 
 ## Installation
 
@@ -111,3 +111,4 @@ And here is the result! Let me know your thoughts.
 *What is a text-object?*
     Instead of editing character by is much more efficient to edit by word, sentence, and paragraph. In Vim, these higher-level concepts are called text objects.  But in the end just a block of text. If you want to go deeper take a look at [this post](https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/) and also the official documentation `:h text-object`.
 
+More questions? Checkout the [Q&A](https://github.com/jeanCarloMachado/vim-toop/wiki/q&a).
