@@ -104,7 +104,6 @@ And here is the result! Let me know your thoughts.
 
 1. Add async support
 2. Results in preview pane
-3. Compose commands?
 
 ## Q&A
 
