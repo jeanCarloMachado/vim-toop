@@ -3,7 +3,6 @@
 Toop stands for Text Objects OPerations.
 It allows you to send text objects to functions or to the shell using Vim's native lingo.
 
-![](https://i.imgur.com/m0nKXBm.gif)
 
 Toop allows to add behavior equivalent to the native `d` part in `dap` or `dis` (delete a paragraph or inside a sentence).
 
