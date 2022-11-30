@@ -103,8 +103,7 @@ And here is the result! Let me know your thoughts.
 
 ## Roadmap
 
-1. Add async support
-2. Results in preview pane
+Im actually not maintaining this project anymore, reach me out if you would like to own it :)
 
 ## Q&A
 
